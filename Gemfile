@@ -46,9 +46,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   
-  # A library for generating fake data such as names, addresses, and phone numbers.
-  gem 'faker'
-
   # An IRB alternative and runtime developer console
   gem 'pry'
 
@@ -71,7 +68,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails-i18n', '~> 5.1'
 
 # A terminal spinner for tasks that have non-deterministic time frame.
-  gem 'tty-spinner'
+gem 'tty-spinner'
+
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
 
 # Integrate React.js with Rails views and controllers, the asset pipeline, or webpacker.
 gem 'react-rails'
