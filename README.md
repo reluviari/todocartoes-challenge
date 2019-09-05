@@ -10,7 +10,7 @@ You can visit the app by clicking this link: [Access App](https://todocartoes-da
 Let's create a new application enabled with Webpack and React. You need to have node and yarn installed on your computer.
 
 ```sh
-$ rails new reluviaris-rails-with-webpacker-react --webpack=react --database=postgresql
+$ rails new app-name --with-webpacker-react --webpack=react --database=postgresql
 ```
 
 ```sh
