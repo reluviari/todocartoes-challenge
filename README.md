@@ -10,7 +10,7 @@ You can visit the app by clicking this link: [Access App](https://todocartoes-da
 Let's create a new application enabled with Webpack and React. You need to have node and yarn installed on your computer.
 
 ```sh
-$ rails new reluviaris-rails-with-webpacker-react --webpack=react --database=postgresql
+$ rails new app-name --with-webpacker-react --webpack=react --database=postgresql
 ```
 
 ```sh
@@ -24,7 +24,6 @@ $ rails g pager_api:install
 ## Ruby version: 
 
 * 2.5.3 
-* 
 
 ## System dependencies
 
@@ -64,15 +63,13 @@ $ rails app:setup
 
 ## Endpoint products
 
-To search for products through enpoint, use the URL below always passing the "page" parameter:
-
 Total objects per page: 15
 
-```sh
-https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=5
-```
+To search for products through enpoint, use the URL below always passing the "page" parameter:
 
-This will output a json object like:
+[https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=5](https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=5)
+
+This will output a json with objects like:
 
 ```sh
 [
@@ -106,9 +103,9 @@ This will output a json object like:
 
 If an invalid page number is entered, a "meta" is returned with information on the number of pages available and the total number of objects:
 
-```sh
-https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=88
-```
+
+[https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=88](https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=88)
+
 
 This will output a json object like:
 
@@ -117,9 +114,9 @@ This will output a json object like:
      products: [ ],
      meta: {
          pagination: {
-         per_page: 15,
-         total_pages: 8,
-         total_objects: 133
+             per_page: 15,
+             total_pages: 8,
+             total_objects: 133
       }
   }
 ```
