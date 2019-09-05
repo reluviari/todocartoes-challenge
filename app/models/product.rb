@@ -3,6 +3,7 @@ class Product < ApplicationRecord
     validates :description, presence: true, length: { maximum: 1000 }
     VALID_PRICE_REGEX = /\A\d+(?:\.\d{0,3})?\z/
     validates :price, presence: true, :format => { with: VALID_PRICE_REGEX }, :numericality => {:greater_than => 0}
+    
     validates_uniqueness_of :name
 
     belongs_to :category

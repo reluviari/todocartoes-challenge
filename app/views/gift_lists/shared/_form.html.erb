@@ -9,32 +9,35 @@
 </script>
 
 <% if @gift_list.errors.any? %>
-<div class="ui orange message">
-    <ul class="list">
-        <% @gift_list.errors.full_messages.each do |message| %>
-        <li> <%= message %></li>
-        <% end %>
-    </ul>
-</div>
+    <div class="ui orange message">
+        <ul class="list">
+            <% @gift_list.errors.full_messages.each do |message| %>
+            <li> <%= message %></li>
+            <% end %>
+        </ul>
+    </div>
 <% end %>
 
 <div class="ui raised segment">
     <div class="ui form">
         <%= form_with(model: [ @gift_list ], local: true) do |form| %>
-        <%= form.hidden_field :suggestion, value: false  %>
-        <div class="two fields">
-            <div class="field">
-                <label>Nome</label>
-                <%= form.text_field :name, placeholder: 'Informe o nome'  %>
+            
+            <%= form.hidden_field :suggestion, value: false  %>
+            
+            <div class="two fields">
+                <div class="field">
+                    <label>Nome</label>
+                    <%= form.text_field :name, placeholder: 'Informe o nome'  %>
+                </div>
+                <div class="field">
+                    <label>Data Evento</label>
+                    <%= form.text_field :date_event, placeholder: 'Informe a data do evento'  %>
+                </div>
             </div>
-            <div class="field">
-                <label>Data Evento</label>
-                <%= form.text_field :date_event, placeholder: 'Informe a data do evento'  %>
-            </div>
-        </div>
-        <button type="submit" class="ui positive button">
-            Salvar
-        </button>
+            <button type="submit" class="ui positive button">
+                Salvar
+            </button>
+
         <% end %>
     </div>
 </div>

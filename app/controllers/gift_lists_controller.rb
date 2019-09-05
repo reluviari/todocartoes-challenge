@@ -14,11 +14,6 @@ class GiftListsController < ApplicationController
         @products = Product.order(category_id: :desc).limit(8)
     end
 
-    def add_products
-        @gift_list = GiftList.find(params[:gift_list_id])
-        @product_store = User.first.products
-    end
-
     def create
         @gift_list = GiftList.new(params_gift_list)
 
@@ -31,8 +26,12 @@ class GiftListsController < ApplicationController
         end
     end
 
+    def add_products
+        @gift_list = GiftList.find(params[:gift_list_id])
+        @product_store = User.first.products
+    end
+
     private
-  
     def params_gift_list
         params.require(:gift_list).permit(:name, :date_event, :suggestion)
     end

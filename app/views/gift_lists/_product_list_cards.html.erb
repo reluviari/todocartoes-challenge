@@ -1,28 +1,30 @@
 <h2 class="ui orange header"><%= name %></h2>
 <div class="ui divider"></div>
+
 <div class="ui four cards">
 	<% product_list.each do |product| %>
 
-	<div class="card">
-		<div class="image">
-			<img src="<%= app_image(product) %>">
-		</div>
-		<div class="content">
-			<div class="header"><%= product.name %></div>
-			<div class="meta"><%= product.category %></div>
-			<div class="description"><%= truncate product.description, length: 100, seperator: /\w+/ %></div>
-		</div>
-		<div class="extra content center aligned">
-			<div class="ui orange mini horizontal statistic">
-				<div class="value">
-					R$ <%= number_to_human product.price %>
+		<div class="card">
+			<div class="image">
+				<img src="<%= product_image(product) %>">
+			</div>
+			<div class="content">
+				<div class="header"><%= product.name %></div>
+				<div class="meta"><%= product.category %></div>
+				<div class="description"><%= truncate product.description, length: 100, seperator: /\w+/ %></div>
+			</div>
+			<div class="extra content center aligned">
+				<div class="ui orange mini horizontal statistic">
+					<div class="value">
+						R$ <%= number_to_human product.price %>
+					</div>
 				</div>
 			</div>
+			<div class="ui bottom attached button">
+				<i class="orange remove icon"></i>
+				Remover Produto da Lista
+			</div>
 		</div>
-		<div class="ui bottom attached button">
-			<i class="orange remove icon"></i>
-			Remover Produto da Lista
-		</div>
-	</div>
+		
 	<% end %>
 </div>

@@ -19,20 +19,20 @@
 
 <div class="ui raised segment two column grid">
 	<% @my_gift_lists.each do |my_gift_list| %>
-	<div class="column">
-		<div class="ui padded center aligned raised segment">
-			<h2 class="ui center aligned icon header">
-				<i class="circular users icon"></i>
-				<%= my_gift_list.name %>
-			</h2>
-			<div class="ui buttons">
-				<%= button_to 'VER PRODUTOS', gift_list_path(my_gift_list.id), class: 'ui button', method: :get %>
-				<div class="or"></div>
-				<button class="ui positive button">COMPARTILHAR</button>
+	
+		<div class="column">
+			<div class="ui padded center aligned raised segment">
+				<h2 class="ui center aligned icon header">
+					<i class="circular users icon"></i>
+					<%= my_gift_list.name %>
+				</h2>
+				<div class="ui buttons">
+					<%= button_to 'VER PRODUTOS', gift_list_path(my_gift_list.id), class: 'ui button', method: :get %>
+					<div class="or"></div>
+					<button class="ui positive button">COMPARTILHAR</button>
+				</div>
 			</div>
 		</div>
-	</div>
+
 	<% end %>
 </div>
-
-<%#= render partial: "gift_lists/gift_list_cards", locals: { name: "Minhas Listas", my_gift_lists: @my_gift_lists } %>

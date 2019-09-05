@@ -1,64 +1,72 @@
 <div class="ui padded raised segment">
-    <div class="ui items">
-      <div class="item">
-        <div class="image">
-          <img src="<%= app_image(@app) %>">
-        </div>
-        <div class="content">
-          <h1 class="header"><%= @app.name %></h1>
-          <div class="meta">
-            <span class="cinema"><%= @app.category %></span>
-          </div>
-          <div class="meta">
-            <span class="version">&nbsp</span>
-          </div>
-          <div class="meta">
-            <span class="release">Adicionado em <%= @app.created_at.strftime("%d/%m/%Y") %></span>
-          </div>
-          <div class="bottom aligned content">
-              <%= button_to 'Guardar Produto', add_product_user_stores_path(@app.id), class: 'ui primary button', data: { confirm: 'Deseja Guardar o Produto?' }  %>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ui divider"></div>
-    <div class="ui three small statistics">
-      <div class="statistic">
-        <div class="value">
-          <i class="small green arrow alternate circle down outline icon"></i> <%= rand(7..160) %>
-        </div>
-        <div class="label">
-          Listas
-        </div>
-      </div>
-      <div class="statistic">
-        <div class="value">
-          <i class="small yellow star icon"></i> <%= rand(6..10) %>
-        </div>
-        <div class="label">
-          Classificação
-        </div>
-      </div>
-      <div class="statistic">
-        <div class="value">
-          <i class="small users icon"></i> <%= rand(130..1000) %>
-        </div>
-        <div class="label">
-          Visualizações
-        </div>
-      </div>
-    </div>
-    <div class="ui divider"></div>
-    <h2 class="header">Descrição</h2>
-    <div>
-      <p><%= @app.description %></p>
-    </div>
-    <div class="ui divider"></div>
-    <h2 class="header">Fotos do Produto</h2>
-    <div style="overflow-x: scroll; display: flex;">
-      <img src="https://dummyimage.com/420x320/ff7f7f/333333.png&text=Sample 1" >
-      <img src="https://dummyimage.com/420x320/7f7fff/333333.png&text=Sample 2" >
-      <img src="https://dummyimage.com/420x320/7fff7f/333333.png&text=Sample 3" >
-      <img src="https://dummyimage.com/420x320/7f7f7f/333333.png&text=Sample 4" >
-    </div>
-  </div>
+	
+	<div class="ui items">
+		<div class="item">
+			<div class="image">
+				<img src="<%= product_image(@app) %>">
+			</div>
+			<div class="content">
+				<h1 class="header"><%= @app.name %></h1>
+				<div class="meta">
+					<span class="cinema"><%= @app.category %></span>
+				</div>
+				<div class="meta">
+					<span class="version">&nbsp</span>
+				</div>
+				<div class="meta">
+					<span class="release">Adicionado em <%= @app.created_at.strftime("%d/%m/%Y") %></span>
+				</div>
+				<div class="bottom aligned content">
+					<%= button_to 'Guardar Produto', add_product_user_stores_path(@app.id), class: 'ui primary button', data: { confirm: 'Deseja Guardar o Produto?' }  %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui divider"></div>
+
+	<div class="ui three small statistics">
+		<div class="statistic">
+			<div class="value">
+				<i class="small green arrow alternate circle down outline icon"></i> <%= rand(7..160) %>
+			</div>
+			<div class="label">
+				Listas
+			</div>
+		</div>
+		<div class="statistic">
+			<div class="value">
+				<i class="small yellow star icon"></i> <%= rand(6..10) %>
+			</div>
+			<div class="label">
+				Classificação
+			</div>
+		</div>
+		<div class="statistic">
+			<div class="value">
+				<i class="small users icon"></i> <%= rand(130..1000) %>
+			</div>
+			<div class="label">
+				Visualizações
+			</div>
+		</div>
+	</div>
+
+	<div class="ui divider"></div>
+
+	<h2 class="header">Descrição</h2>
+	<div>
+		<p><%= @app.description %></p>
+	</div>
+
+	<div class="ui divider"></div>
+
+	<h2 class="header">Fotos do Produto</h2>
+	<div style="overflow-x: scroll; display: flex;">
+		<img src="https://dummyimage.com/420x320/ff7f7f/333333.png&text=Sample 1">
+		<img src="https://dummyimage.com/420x320/7f7fff/333333.png&text=Sample 2">
+		<img src="https://dummyimage.com/420x320/7fff7f/333333.png&text=Sample 3">
+		<img src="https://dummyimage.com/420x320/7f7f7f/333333.png&text=Sample 4">
+	</div>
+	
+</div>
