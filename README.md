@@ -24,7 +24,6 @@ $ rails g pager_api:install
 ## Ruby version: 
 
 * 2.5.3 
-* 
 
 ## System dependencies
 
