@@ -27,7 +27,7 @@
   
     desc "Adiciona produtos"
     task add_products: :environment do
-    	(1..768).each do |i|
+    	(1..891).each do |i|
         	Product.create({
           		name: Faker::Commerce.product_name,
           		category_id: Category.find(Category.pluck(:id).sample).id,
