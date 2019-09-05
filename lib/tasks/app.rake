@@ -6,10 +6,10 @@
         show_spinner("Apagando BD...") { %x(rails db:drop) }
         show_spinner("Criando BD...") { %x(rails db:create) }
         show_spinner("Migrando BD...") { %x(rails db:migrate) }
-        show_spinner("Cadastrando usuário padrão...") { %x(rails dev:add_default_user) }
-        show_spinner("Cadastrando categorias de produtos...") { %x(rails dev:add_categories) }
-        show_spinner("Cadastrando produtos...") { %x(rails dev:add_products) }
-        show_spinner("Cadastrando sugestão de listas de presentes...") { %x(rails dev:add_suggestion_lists) }
+        show_spinner("Cadastrando usuário padrão...") { %x(rails app:add_default_user) }
+        show_spinner("Cadastrando categorias de produtos...") { %x(rails app:add_categories) }
+        show_spinner("Cadastrando produtos...") { %x(rails app:add_products) }
+        show_spinner("Cadastrando sugestão de listas de presentes...") { %x(rails app:add_suggestion_lists) }
       # else
         # puts "Você não está em ambiente de desenvolvimento!"
       # end
