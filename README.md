@@ -64,13 +64,11 @@ $ rails app:setup
 
 ## Endpoint products
 
-To search for products through enpoint, use the URL below always passing the "page" parameter:
-
 Total objects per page: 15
 
-```sh
-https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=5
-```
+To search for products through enpoint, use the URL below always passing the "page" parameter:
+
+[https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=5](https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=5)
 
 This will output a json object like:
 
@@ -117,9 +115,9 @@ This will output a json object like:
      products: [ ],
      meta: {
          pagination: {
-         per_page: 15,
-         total_pages: 8,
-         total_objects: 133
+             per_page: 15,
+             total_pages: 8,
+             total_objects: 133
       }
   }
 ```
