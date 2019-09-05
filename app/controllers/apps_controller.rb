@@ -1,12 +1,12 @@
 class AppsController < ApplicationController
   before_action :set_app, only: [:show]
 
-  def show
-  end
+	def show
+  	end
 
-  private
+  	private
     def set_app
       @app = Product.find(params[:id])
-    end
-
+	end
+	
 end

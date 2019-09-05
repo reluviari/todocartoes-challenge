@@ -79,5 +79,8 @@ gem 'react-rails'
 # Semantic UI, converted to Sass and ready to drop into Rails & Compass.
 gem 'semantic-ui-sass'
 
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+
 # ActiveModel::Serializer implementation and Rails hooks
 gem 'active_model_serializers'

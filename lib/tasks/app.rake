@@ -18,39 +18,39 @@
 
     desc "Adiciona categorais de produtos"
     task add_categories: :environment do
-      (1..10).each do |i|
-        Category.create({
-          name: Faker::Commerce.department
-        })  
-      end
+    	(1..13).each do |i|
+        	Category.create({
+          		name: Faker::Commerce.department
+        	})  
+      	end
     end
   
     desc "Adiciona produtos"
     task add_products: :environment do
-      (1..50).each do |i|
-        Product.create({
-          name: Faker::Commerce.product_name,
-          category_id: Category.find(Category.pluck(:id).sample).id,
-          description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: false, random_sentences_to_add: 20),
-          price: Faker::Commerce.price
-        })  
-      end
+    	(1..768).each do |i|
+        	Product.create({
+          		name: Faker::Commerce.product_name,
+          		category_id: Category.find(Category.pluck(:id).sample).id,
+          		description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: false, random_sentences_to_add: 20),
+          		price: Faker::Commerce.price
+        	})  
+      	end
     end
 
     desc "Adiciona sugestao de listas"
     task add_suggestion_lists: :environment do
-      (1..50).each do |i|
-        GiftList.create({
-          name: Faker::Space.star_cluster,
-          suggestion: true
-        })  
-      end
+    	(1..17).each do |i|
+        	GiftList.create({
+          		name: Faker::Space.star_cluster,
+          		suggestion: true
+        	})  
+      	end
     end
   
     def show_spinner(msg_start, msg_end = "Concluído!")
-      spinner = TTY::Spinner.new("[:spinner] #{msg_start}")
-      spinner.auto_spin
-      yield
-      spinner.success("(#{msg_end})")    
+    	spinner = TTY::Spinner.new("[:spinner] #{msg_start}")
+      	spinner.auto_spin
+      	yield
+      	spinner.success("(#{msg_end})")    
     end
   end
