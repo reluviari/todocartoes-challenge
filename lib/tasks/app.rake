@@ -3,9 +3,9 @@
     desc "Configura o ambiente para demonstração"
     task setup: :environment do
       # if Rails.env.development?
-        show_spinner("Apagando BD...") { %x(rails db:drop) }
-        show_spinner("Criando BD...") { %x(rails db:create) }
-        show_spinner("Migrando BD...") { %x(rails db:migrate) }
+        show_spinner("Resetando BD...") { %x(rails db:reset) }
+        # show_spinner("Criando BD...") { %x(rails db:create) }
+        # show_spinner("Migrando BD...") { %x(rails db:migrate) }
         show_spinner("Cadastrando usuário padrão...") { %x(rails app:add_default_user) }
         show_spinner("Cadastrando categorias de produtos...") { %x(rails app:add_categories) }
         show_spinner("Cadastrando produtos...") { %x(rails app:add_products) }
