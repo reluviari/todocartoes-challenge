@@ -106,10 +106,9 @@ This will output a json object like:
 
 If an invalid page number is entered, a "meta" is returned with information on the number of pages available and the total number of objects:
 
-```sh
-https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=88
-[Access App](https://todocartoes-danilo-challenge.herokuapp.com/)
-```
+
+[https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=88](https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=88)
+
 
 This will output a json object like:
 
