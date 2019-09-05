@@ -1,4 +1,4 @@
-  namespace :dev do
+  namespace :app do
 
     desc "Configura o ambiente para demonstração"
     task setup: :environment do

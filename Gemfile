@@ -46,9 +46,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   
-  # A terminal spinner for tasks that have non-deterministic time frame.
-  gem 'tty-spinner'
-
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
 
@@ -72,6 +69,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
 gem 'rails-i18n', '~> 5.1'
+
+# A terminal spinner for tasks that have non-deterministic time frame.
+  gem 'tty-spinner'
 
 # Integrate React.js with Rails views and controllers, the asset pipeline, or webpacker.
 gem 'react-rails'

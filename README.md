@@ -28,6 +28,7 @@ Let's create a new application enabled with Webpack and React. You need to have 
 
 
 ## Configuration
+
 ```sh
  $ bundle install
 ```
@@ -37,19 +38,20 @@ Let's create a new application enabled with Webpack and React. You need to have 
 ```
 
 ## Database creation
+
 ```sh
  $ rails db:create
 ```
+
 ```sh
  $ rails db:migrate
 ```
 
 ## Database initialization
-```sh
- $ rails dev:setup
-```
 
-## How to run the test suite
+```sh
+ $ rails app:setup
+```
 
 ## Deployment instructions
 
