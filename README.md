@@ -69,7 +69,7 @@ To search for products through enpoint, use the URL below always passing the "pa
 
 [https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=5](https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=5)
 
-This will output a json object like:
+This will output a json with objects like:
 
 ```sh
 [
