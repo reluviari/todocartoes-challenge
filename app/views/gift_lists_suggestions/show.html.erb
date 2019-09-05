@@ -1,0 +1,22 @@
+<h1 class="ui orange block header">
+	<i class="orange list icon"></i>
+	<div class="content">
+		Sugestão de Lista
+		<div class="sub header">Você poderá dar um nome exclusivo e escolher uma foto dos seus arquivos.</div>
+	</div>
+</h1>
+
+<div class="ui padded center aligned raised segment">
+	<h2 class="ui center aligned icon header">
+		<i class="circular users icon"></i>
+		Sou Super Herói (Página Estática)
+	</h2>
+
+	<div class="ui buttons">
+		<button class="ui button">QUERO ESSA LISTA PRÉ PRONTA</button>
+		<div class="or"></div>
+		<%= button_to 'QUERO CRIAR UMA LISTA DO ZERO', new_gift_list_path, class: 'positive ui button', method: :get %>
+	</div>
+</div>
+
+<%= render partial: "gift_lists_suggestions/product_cards", locals: { name: "Produtos",product_list: @products } %>

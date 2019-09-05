@@ -1,0 +1,21 @@
+<h1 class="ui orange block header">
+	<i class="orange gift icon"></i>
+	<div class="content">
+		Produtos
+		<div class="sub header">Guarde seus produtos favoritos para criar suas listas no futuro.</div>
+	</div>
+</h1>
+
+<h2 class="ui orange header">Pesquisar Produtos</h3>
+<div class="ui divider"></div>
+<%= react_component("Search", prerender: true) %>
+
+<h2 class="ui orange header">Categorias de Produtos</h3>
+<div class="ui divider"></div>
+
+<div class="ui raised segment search-container">
+	<%= react_component("Categories", prerender: true) %>
+</div>
+
+<%= render partial: "apps/app_cards", locals: { name: "Mais Escolhidos", app_list: @most_selected } %>
+<%= render partial: "apps/app_cards", locals: { name: "Ótimo Preços", app_list: @best_prices } %>

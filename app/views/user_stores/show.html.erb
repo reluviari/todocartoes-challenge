@@ -1,0 +1,10 @@
+<h1 class="ui orange block header">
+	<i class="orange gift icon"></i>
+	<div class="content">
+		Meus Produtos
+		<div class="sub header">Aqui estão os produtos guardados para crição de suas listas.</div>
+	</div>
+</h1>
+
+<%#= react_component("Search", prerender: true) %>
+<%= render partial: "user_stores/product_cards", locals: { name: "Lista de Produtos", products_list: @product_store } %>

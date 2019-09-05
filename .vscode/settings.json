@@ -1,0 +1,24 @@
+{
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.rendererType": "dom",
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Arc Dark",
+    "editor.fontSize": 15,
+    "editor.tabCompletion": "on",
+    "editor.detectIndentation": true,
+    "editor.lineHeight": 25,
+    "editor.fontFamily": "Fira Code",
+
+    "editor.fontLigatures": true,
+    "editor.snippetSuggestions": "top",
+
+    "workbench.iconTheme": "material-icon-theme",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    "emmet.triggerExpansionOnTab": true,
+
+    "files.associations": {
+        "*.html.erb": "html"
+    }
+}

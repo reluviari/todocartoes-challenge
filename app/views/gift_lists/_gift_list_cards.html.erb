@@ -1,0 +1,19 @@
+<h2 class="ui orange header"><%= name %></h2>
+<div class="ui divider"></div>
+<div class="ui four link cards">
+	<% my_gift_lists.each do |my_gift_list| %>
+	<a class="card" href="<%= app_path(my_gift_list) %>">
+		<div class="image">
+			<img src="<%= app_image(my_gift_list) %>">
+		</div>
+
+		<div class="extra content center aligned">
+			<div class="ui orange mini horizontal statistic">
+				<div class="value">
+					<%= my_gift_list.name %> dsdsds
+				</div>
+			</div>
+		</div>
+	</a>
+	<% end %>
+</div>

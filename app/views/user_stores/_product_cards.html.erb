@@ -1,0 +1,30 @@
+<h2 class="ui orange header"><%= name %></h2>
+<div class="ui divider"></div>
+<div class="ui four cards">
+	<% products_list.each do |product_list| %>
+
+	<div class="card">
+		<div class="image">
+			<img src="<%= app_image(product_list) %>">
+		</div>
+		<div class="content">
+			<div class="header"><%= product_list.name %></div>
+			<div class="meta"><%= product_list.category %></div>
+			<div class="description"><%= truncate product_list.description, length: 100, seperator: /\w+/ %></div>
+		</div>
+		<div class="extra content center aligned">
+			<div class="ui orange mini horizontal statistic">
+				<div class="value">
+					R$ <%= number_to_human product_list.price %>
+				</div>
+			</div>
+		</div>
+		<%= link_to delete_product_user_stores_path(product_list.id), method: :delete, data: { confirm: 'Deseja Remover o Produto?' } do %>
+		<div class="ui bottom attached button">
+			<i class="orange remove icon"></i>
+			Remover Produto
+		</div>
+		<% end %>
+	</div>
+	<% end %>
+</div>

@@ -1,0 +1,23 @@
+<h1 class="ui orange block header">
+	<i class="orange list icon"></i>
+	<div class="content">
+		Minha Lista
+		<div class="sub header">Minha lista personalizada.</div>
+	</div>
+</h1>
+
+<div class="ui padded center aligned raised segment">
+	<h2 class="ui center aligned icon header">
+		<i class="circular users icon"></i>
+		<%= @gift_list.name %>
+	</h2>
+
+
+	<div class="ui buttons">
+		<%= button_to 'ADICIONAR MEUS PRODUTOS', add_product_gift_lists_path(@gift_list.id), class: 'ui button', method: :get %>
+		<div class="or"></div>
+		<button class="ui positive button">COMPARTILHAR</button>
+	</div>
+</div>
+
+<%= render partial: "gift_lists/product_list_cards", locals: { name: "Produtos da Minha Lista (Produtos Estáticos)", product_list: @products } %>

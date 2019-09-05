@@ -1,0 +1,38 @@
+<div class="ui container content">
+	<h1 class="ui orange block header">
+		<i class="orange list icon"></i>
+		<div class="content">
+			Minhas Listas
+			<div class="sub header">Minhas listas cadastradas.</div>
+		</div>
+	</h1>
+</div>
+
+<div class="ui container content center aligned">
+	<div class="ui raised segment">
+		<%= button_to 'Crie a sua lista do zero', new_gift_list_path, class: 'positive ui big button', method: :get %>
+		<h3 class="ui header orange">
+			Você poderá escolher todos seus presentes
+		</h3>
+	</div>
+</div>
+
+<div class="ui raised segment two column grid">
+	<% @my_gift_lists.each do |my_gift_list| %>
+	<div class="column">
+		<div class="ui padded center aligned raised segment">
+			<h2 class="ui center aligned icon header">
+				<i class="circular users icon"></i>
+				<%= my_gift_list.name %>
+			</h2>
+			<div class="ui buttons">
+				<%= button_to 'VER PRODUTOS', gift_list_path(my_gift_list.id), class: 'ui button', method: :get %>
+				<div class="or"></div>
+				<button class="ui positive button">COMPARTILHAR</button>
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>
+
+<%#= render partial: "gift_lists/gift_list_cards", locals: { name: "Minhas Listas", my_gift_lists: @my_gift_lists } %>

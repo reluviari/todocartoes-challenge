@@ -1,0 +1,20 @@
+<h2 class="ui orange header"><%= name %></h2>
+<div class="ui divider"></div>
+<div class="ui four link cards">
+	<% suggestion_lists.each do |suggestion_list| %>
+	<a class="card" href="/gift_lists_suggestions/1">
+		<div class="image">
+			<img src="<%= app_image(suggestion_list) %>">
+		</div>
+		<div class="content center aligned">
+			<div class="header"><%= suggestion_list.name %></div>
+			<div class="meta"><%= rand(9..67) %> Itens</div>
+		</div>
+		
+		<div class="ui bottom attached button">
+			<i class="orange search icon"></i>
+			Ver Produtos
+		</div>
+	</a>
+	<% end %>
+</div>

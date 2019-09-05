@@ -1,0 +1,55 @@
+<div class="ui container content">
+	<div class="ui four steps">
+		<div class="active step">
+			<i class="orange list ol icon"></i>
+			<div class="content">
+				<div class="title">Crie uma lista</div>
+				<div class="description">Crie ou escolha uma pronta</div>
+			</div>
+		</div>
+
+		<div class="step">
+			<i class="orange edit icon"></i>
+			<div class="content">
+				<div class="title">Customize</div>
+				<div class="description">Escolha nome e foto</div>
+			</div>
+		</div>
+
+		<div class="step">
+			<i class="orange check circle icon"></i>
+			<div class="content">
+				<div class="title">Escolha</div>
+				<div class="description">Adicione produtos à sua lista</div>
+			</div>
+		</div>
+
+		<div class="step">
+			<i class="orange users icon"></i>
+			<div class="content">
+				<div class="title">Compartilhe</div>
+				<div class="description">Mostre sua lista aos amigos</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="ui container content center aligned">
+	<div class="ui raised segment">
+		<%= button_to 'Crie a sua lista do zero', new_gift_list_path, class: 'positive ui big button', method: :get %>
+		<h3 class="ui header orange">
+			Você poderá escolher todos seus presentes
+		</h3>
+	</div>
+</div>
+
+<h2 class="ui orange header">Sugestões de Listas</h3>
+<div class="ui divider"></div>
+
+<div class="ui raised segment search-container">
+	<%= react_component("GiftListSuggestion", prerender: true) %>
+</div>
+
+<%= render partial: "gift_lists_suggestions/gift_list_suggestions_cards", locals: { name: "Top Listas", suggestion_lists: @most_selected } %>
+<%= render partial: "gift_lists_suggestions/gift_list_suggestions_cards", locals: { name: "Lista com preços mais accesíveis", suggestion_lists: @best_prices } %>

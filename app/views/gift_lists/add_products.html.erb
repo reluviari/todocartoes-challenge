@@ -1,0 +1,16 @@
+<h1 class="ui orange block header">
+	<i class="orange gift icon"></i>
+	<div class="content">
+		Adicionar MEUS PRODUTOS GUARDADOS
+		<div class="sub header">Adicionar produtos guardados à minha lista de presentes .</div>
+	</div>
+</h1>
+
+<div class="ui padded center aligned raised segment">
+	<h2 class="ui center aligned icon header">
+		<i class="circular users icon"></i>
+		<%= @gift_list.name %>
+	</h2>
+</div>
+
+<%= render partial: "gift_lists/product_cards", locals: { name: "Meus Produtos Guardados", product_list: @product_store } %>
