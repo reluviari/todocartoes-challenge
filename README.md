@@ -7,7 +7,7 @@ You can visit the app by clicking this link: [Access App](https://todocartoes-da
 
 ## How the application was generated
 
-Let's create a new application enabled with Webpack and React. You need to have NodeJS and yarn installed on your computer.
+Let's create a new application enabled with Webpack and React. You need to have NodeJS and Yarn installed on your computer.
 
 ```sh
 $ rails new app-name --with-webpacker-react --webpack=react --database=postgresql
