@@ -146,7 +146,7 @@ This will output a json object like:
 
 ## Aditional Information
 
-* Gem react-rails was used only for the ease of using its 'react_component' helper for rendering carousel components and searching for products developed in react.
+* Gem react-rails was used only for the ease of using its 'react_component' helper for rendering carousel component and searching component for products developed in react.
   
 * Semantic Ui was used for front end styling.
 
