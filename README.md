@@ -17,10 +17,6 @@ $ rails new app-name --with-webpacker-react --webpack=react --database=postgresq
 $ rails generate react:install
 ```
 
-```sh
-$ rails g pager_api:install
-```
-
 ## Ruby version: 
 
 * 2.5.3 
@@ -101,7 +97,7 @@ This will output a json with objects like:
 
 ```
 
-If an invalid page number is entered, a "meta" is returned with information on the number of pages available and the total number of objects:
+If an invalid page number is entered, a "meta" is returned with information of pagination with the number of pages available and the total number of objects:
 
 
 [https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=88](https://todocartoes-danilo-challenge.herokuapp.com/api/v1/products?page=88)
@@ -150,7 +146,7 @@ This will output a json object like:
 
 ## Aditional Information
 
-* Gem react-rails was used only for the ease of using its reac_component helper for rendering carousel components and searching for products developed in react.
+* Gem react-rails was used only for the ease of using its 'react_component' helper for rendering carousel components and searching for products developed in react.
   
 * Semantic Ui was used for front end styling.
 
