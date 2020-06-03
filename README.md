@@ -1,6 +1,12 @@
-# README
+<h1 align="center">
+  <strong>Todo Cartões - Challenge</strong>
+</h1> 
 
-## Link to App
+<p align="center">
+    Gifts List
+</p> 
+
+## 📌 Link to App
 
 You can visit the app by clicking this link: [Access App](https://todocartoes-danilo-challenge.herokuapp.com/).
 
@@ -151,7 +157,7 @@ This will output a json object like:
 * Semantic Ui was used for front end styling.
 
 
-License
-----
 
-MIT (change)
+## 🙋‍♂️ Author
+
+* **Danilo Dias** - [reluviari](https://github.com/reluviari)
